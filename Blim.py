@@ -20,7 +20,6 @@ banner="""
 (Mahmoud Mohamed) fb.me/mr.black.eg0 """
 
 
-a.system("cls")
 class good_or_bad(object):
 	def tellmewhatis(self,email,password,caso):
 		if caso == True:

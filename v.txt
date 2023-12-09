@@ -114,25 +114,25 @@ def login():
         time.sleep(5)
         exit()
     ###########[get server api]##############
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36 Edg/102.0.1245.39'}
-    api_server = requests.get('https://raw.githubusercontent.com/mrblackeg/test/master/dev.txt',headers=headers,verify=False).text.rstrip()
+   # headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36 Edg/102.0.1245.39'}
+    #api_server =  requests.get('https://raw.githubusercontent.com/mrblackeg/test/master/dev.txt',headers=headers,verify=False).text.rstrip()
     # time.sleep(2)
 	#########################################
-    headers = {
-        'authority': api_server,
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-        'accept-language': 'en-US,en;q=0.9',
-        'origin': api_server,
-        'referer': api_server,
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
-    }
+   # headers = {
+      #  'authority': api_server,
+     #   'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    #    'accept-language': 'en-US,en;q=0.9',
+     #   'origin': api_server,
+     #   'referer': api_server,
+     #   'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+#    }
 
     data = {
         'username': apikey,
         'mac': get_mac(),
     }
 
-    re = requests.get(api_server, headers=headers, params=data,verify=False).text
+    re = requests.get("https://whtsapo.com/mang/api.php", headers=headers, params=data,verify=False).text
     time.sleep(0.05)
     # mgs = re["messege"]
     # print(mgs)

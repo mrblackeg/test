@@ -1,1 +1,1 @@
-https://whtsapo.com/mang/api.php
+https://whtsapo.com/mang/auth.php
